@@ -1,0 +1,50 @@
+/* ví dụ 
+font - family: phông chữ 
+font - size: cỡ chữ - em/rem/%
+font - weight: độ đậm nhạt - normal, bold, bolder, lighter
+font - style: chữ nghiêng - normal | italic | oblique
+font - variant: kiểu chữ hoa - small-caps
+font: gom hết font: style weight variant size/line-height font-family
+p { font: 1em sans-serif; }
+line-height: sau font-size và ngăn bằng dấu / làm kc giữa các hàng
+vd: h2 { font: bold 1.75em/2 sans-serif; }
+*/
+<style>
+    html { font-size: 100%; }
+    h1 { font-size: 1.5em; } /* 1.5 x 16px = 24px */
+</style>
+</head>
+<body>
+<h1>Tiêu đề h1</h1>
+/* ví dụ 2 */
+<style>
+    html { font-size: 100%; }
+    article { font-size: 0.875em } /* 0.875 x 16px = 14px */
+    h1 { font-size: 1.5em; } /* 1.5 x 14px = 21px */
+</style>
+</head>
+<body>
+<article>
+    <h1>Tiêu đề h1</h1>
+</article>
+/* ví dụ 3 */
+<style>
+    html { font-size: 100%; }
+    article { font-size: 75% } /* 75% x 16px = 12px */
+    h1 { font-size: 150%; } /* 150% x 12px = 18px */
+</style>
+</head>
+<body>
+<article>
+    <h1>Tiêu đề h1</h1>
+</article>
+</body>
+/* màu chữ
+Ví dụ, để phần tử h1 có màu xám, có thể sử dụng một trong các chỉ dẫn CSS sau,*/
+h1 { color: gray; }
+
+h1 { color: #666666; } /* R = 66, G = 66, B = 66 */
+
+h1 { color: #666; } /* R = 6, G = 6, B = 6 */
+
+h1 { color: rgb(102,102,102); }

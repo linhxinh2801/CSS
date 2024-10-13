@@ -1,0 +1,66 @@
+/* Ảnh nền - Chèn và thao tác với ảnh nền*/
+/*Ví dụ, dưới đây là đoạn mã CSS để thêm ảnh nền cho toàn bộ trang web (phần tử body) và cho phần tử blockquote*/
+body {
+	background-image: url(star.png);
+     }
+blockquote {
+	background-image: url(dot.png);
+	padding: 2em;
+	border: 4px dashed;
+            }
+/*Nhân bản ảnh nền*/
+/*nếu chỉ muốn ảnh nền xuất hiện một lần, sử dụng giá trị no-repeat*/
+body {
+	background-image: url(star.png);
+	background-repeat: no-repeat;
+}
+/*Ví dụ, nếu chỉ muốn ảnh nền lặp lại trên một hàng ngang, sử dụng giá trị repeat-x,*/
+body {
+	background-image: url(star.png);
+	background-repeat: repeat-x;
+}
+/*Ví dụ, nếu chỉ muốn ảnh nền lặp lại trên một hàng dọc, sử dụng giá trị repeat-y,*/
+body {
+	background-image: url(star.png);
+	background-repeat: repeat-y;
+}
+/*Dùng đơn vị đo*/
+background-position: 200px 50px;
+/*Thuộc tính background*/
+body { background: white url(star.png) no-repeat right top fixed; }
+/*Chỉ dẫn CSS trên là viết rút gọn của các chỉ dẫn CSS sau:*/
+body {
+	background-color: white;
+	background-image: url(arlo.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+}
+/*Cẩn thận khi sử dụng thuộc tính background để tránh bị ghi đè. Quan sát ví dụ sau,*/
+h1, h2, h3 { background: red url(dots.gif) repeat-x;}
+h3 {background: green;}
+/*Chèn nhiều ảnh nền*/
+body {
+	background-image: url(image1.png), url(image2.png), url(image3.png);
+	background-position: left top, center center, right bottom;
+	background-repeat: no-repeat; no-repeat; no-repeat;
+}
+/*Có thể sử dụng thuộc tính background để viết các luật CSS được gọn hơn, ví dụ,*/
+body {
+	background:
+	url(image1.png) left top no-repeat,
+	url(image2.png) center center no-repeat,
+	url(image3.png) right bottom no-repeat;
+}
+
+/*luôn dự phòng một màu nền bằng thuộc tính background-color. Ví dụ,*/
+body {
+/* cho các trình duyệt không hỗ trợ nhiều giá trị trong thuộc tính background */
+	background-image: url(image_fallback.png) top left no-repeat;
+	background:
+		url(image1.png) left top no-repeat,
+		url(image2.png) center center no-repeat,
+		url(image3.png) right bottom no-repeat;
+	background-color: papayawhip; /* màu nền dự phòng */
+}
+

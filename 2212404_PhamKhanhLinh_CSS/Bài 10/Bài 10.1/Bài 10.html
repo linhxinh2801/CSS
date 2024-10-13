@@ -1,0 +1,47 @@
+/*Định dạng màu- xác định màu-tên màu*/
+/*Ví dụ, một chỉ dẫn CSS có dùng tên màu*/
+p { color: gray; } /* văn bản trong p sẽ có màu xám */
+/*Màu chữ*/
+/*Ví dụ, chỉ dẫn CSS sau sẽ thiết lập màu chữ xanh nhạt cho phần tử blockquote, với các giá trị R:80, G:140 và B:25, đổi giá trị này sang hệ 16 sẽ là #508C19. Hai phần tử p và em là hậu duệ của phần tử blockquote nên cũng được kế thừa màu vừa thiết lập.*/
+<blockquote>
+  <p>Đây là ví dụ về màu chữ <em>(foreground color)</em></p>
+</blockquote>
+<style>
+  blockquote {
+      border: 4px dashed;
+      color: #508C19;
+      background-color: #B4BDE6;
+    }
+</style>
+/*Màu nền*/
+/*Ví dụ, định dạng màu nền cho phần tử blockquote,*/ 
+ blockquote {
+
+      border: 4px dashed;
+
+      color: #508C19;
+
+      background-color: #B4BDE6;
+
+    }
+/*Giới hạn vùng nền*/
+<blockquote>
+        <p>Đây là ví dụ về background-clip</p>
+      </blockquote>
+   <style>
+      blockquote {
+      border: 4px dashed;
+      padding: 10px;
+      color: #043527;
+      background-color:#7ccfaf;
+      background-clip: content-box;
+</style>
+/*Làm mờ một phần tử*/
+body {
+      background-color: #333333;
+    }
+    h1 {
+        color: #00FF00;
+        background-color: #FFFFFF;
+        opacity: .25;
+    }

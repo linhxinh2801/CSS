@@ -1,0 +1,103 @@
+/*Bộ chọn theo trạng thái*/
+/*Bộ chọn lớp giả (pseudo-class)*/
+/*Bộ chọn pseudo-class cho liên kết*/
+a:link {
+	color: maroon;
+}
+a:visited {
+	color: gray;
+}
+/*Bộ chọn pseudo-class dựa trên thao tác người dùng*/
+/*input:focus { background-color: yellow; }*/
+a:hover {
+	color: maroon;
+	background-color: #ffd9d9;
+}
+/*active*/
+a:active {
+	color: red;
+	background-color: # ffd9d9;
+}
+/*CSS cho các trạng thái của một liên kết*/
+/*Thứ tự của các bộ chọn nên theo là, :link, :visited, :focus, :hover, :active*/
+a { text-decoration: none; } /* bỏ dấu gạch chân */
+a:link { color: maroon; }
+a:visited { color: gray; }
+a:focus { color: maroon; background-color: #ffd9d9; }
+a:hover { color: maroon; background-color: #ffd9d9; }
+a:active { color: red; background-color: #ffd9d9; }
+/*Bộ chọn pseudo-class dựa trên cấu trúc tài liệu HTML*/
+/*Ví dụ: để chọn phần tử đầu tiên trong một nhóm các phần tử cùng cấp (anh em), chúng ta sử dụng :first-child.*/
+ <p>Một số nội dung cần học để làm web front-end</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>React</li>
+    </ul>
+ <style>
+    li:first-child { color: red; }
+</style>
+/*Bộ chọn pseudo-class cho các input của form*/
+  <div>
+        <input type="checkbox" name="my-checkbox" id="opt-in">
+        <label for="opt-in">Chọn</label>
+    </div>
+<style>
+ /* Định dạng label khi người dùng đánh dấu chọn */
+    input:checked + label {
+        color: red;
+    }
+ /* Định dạng ô chọn khi được chọn */
+    input[type="checkbox"]:checked {
+        box-shadow: 0 0 0 3px hotpink;
+    }
+</style>
+/*Bộ chọn phần tử giả (pseudo-element)*/
+/*Bộ chọn ::first-line*/
+p::first-line {
+	color: red;
+  }
+/*Bộ chọn ::first-letter*/
+/*VD  chúng ta sẽ làm nổi chữ cái đầu tiên của một đoạn (tạo drop cap):*/
+<p>Ví dụ, chúng ta sẽ làm nổi chữ cái đầu tiên của một đoạn </p>
+<style>
+ p::first-letter {
+        color: white;
+        background-color: #333;
+        border-radius: 2px;
+        font-size: 200%;
+        box-shadow: 3px 3px 0 yellow;
+        padding: 6px 3px;
+        margin-right: 5px;
+    }
+</style>
+/* Bộ chọn ::before*/
+/*Ví dụ, đoạn mã CSS sau sẽ thêm cụm từ “Đọc thêm: ” vào trước phần tử p*/
+ p::before {
+    content: "Đọc thêm: ";
+    color: red;
+    font-weight: bold;
+  }
+/*Bộ chọn ::after*/
+/*Ví dụ, đoạn mã CSS sau sẽ thêm cụm từ “(Kết thúc)” vào sau phần tử p*/
+  p::after {
+    content: "(Kết thúc)";
+    color: red;
+    font-weight: bold;
+  }
+/* Bộ chọn dựa vào thuộc tính*/
+/*element[attribute]*/
+  img[title] {border: 3px solid;}
+/*element[attribute=“giá trị”]*/
+  img[title="con vịt"] {border: 3px solid;}
+/*element[attribute~=“giá trị”]*/
+  img[title~="con"] {border: 3px solid;}
+/*element[attribute|=“giá trị”]*/
+  img[title|="con"] {border: 3px solid;}
+/*element[attribute^=“phần đầu của giá trị”]*/
+  img[src^="/images/icons"] {border: 3px solid;}
+/*element[attribute$=“phần cuối của giá trị”]*/
+  img[src^=".jpg"] {border: 3px solid;}
+/*element[attribute*=“một phần giá trị bất kì”]*/
+  img[title*="on"] {border: 3px solid;}

@@ -1,5 +1,4 @@
-
-/*VD1:đoạn mã sau minh họa hình ảnh của box model, gồm 5 cái hộp, với cấu trúc lồng nhau.*/
+/*VD1*/
 <head>
 <style>
 
@@ -23,27 +22,24 @@
             chức của CSS để <em>hiển thị</em> các phần tử ra giao diện.</p>
     </div>
 </body>
-/*VD2:Thiết lập kích thước kiểu content-box:Ví dụ, đoạn mã sau sẽ thiết lập kích thước cho phần tử p gồm các giá trị: rộng 500px, cao 150px, vùng đệm trong (cả bốn phía) 20px, đường viền (cả bốn cạnh) 2px, vùng đệm ngoài (cả bốn phía) 20px. Giả sử kiểu kích thước là content-box, nên chiều rộng và chiều cao sẽ là của vùng nội dung.*/
-p {
-	background: #c2f670;
-	width: 500px;
-	height: 150px;
-	padding: 20px;
-	border: 2px solid gray;
-	margin: 20px;
-}
-/*VD Thiết lập kích thước kiểu border-box: quan sát kết quả khi thực hiện thiết lập width cho phần tử p là 500px, và height là 150px*/
-p {
-	box-sizing: border-box;
-	width: 500px;
-	height: 150px;
-}
-/*thiết lập cho mọi phần tử của tài liệu HTML đều được tính kích thước theo kiểu border-box bằng khai báo sau*/
+/*VD2*/
+	p {
+		background: #c2f670;
+		width: 500px;
+		height: 150px;
+		padding: 20px;
+		border: 2px solid gray;
+		margin: 20px;
+	}
+/*VD3*/
+	p{
+		box-sizing: border-box;
+		width: 500px;
+		height: 150px;
+	}
+	* { box-sizing: border-box; }
 
-* { box-sizing: border-box; }
-
-/* VD Vùng đệm trong*/
-
+/*VD4*/
 p {
 	padding-top: 1em;
 	padding-right: 3em;
@@ -51,45 +47,43 @@ p {
 	padding-left: 3em;
 	background-color: #D098D4;
 }
-/*Ví dụ: Thuộc tính padding*/
-   /*padding: top right bottom left;*/
+/*VD5*/
 p {
 	padding: 1em 3em 1em 3em;
 	background-color: #D098D4;
 }
-  /*padding: top right/left bottom;*/
+/*VD6*/
 p {
 	padding: 1em 3em;
 	background-color: #D098D4;
 }
-  /*padding: top/bottom right/left;*/  
-p {
-	padding: 1em 3em;
-	background-color: #D098D4;
-}
-  /*Ví dụ, chỉ dẫn CSS sau sẽ thiết lập padding cho cả bốn cạnh là 15px,*/
-p {
-	padding: 15px;
-	background-color: #D098D4;
-}
-/*Ví dụ các kiểu đường viền*/
-  /*VD sau sẽ thiết lập bốn kiểu đường viền khác nhau cho bốn cạnh*/
-p {
-	border-top-style: solid;
-	border-right-style: dashed;
-	border-bottom-style: double;
-	border-left-style: dotted;
-	width: 300px;
-	height: 100px;
-}
-p {
-	border-style: solid dashed double dotted;
-	width: 300px;
-	height: 100px;
-}
+/*VD7*/ 
+	p {
+		padding: 1em 3em;
+		background-color: #D098D4;
+	}
+/*VD8*/
+	p{
+		padding: 15px;
+		background-color: #D098D4;
+	}
+/*VD9*/
+	p {
+		border-top-style: solid;
+		border-right-style: dashed;
+		border-bottom-style: double;
+		border-left-style: dotted;
+		width: 300px;
+		height: 100px;
+	}
+/*VD10*/
+	p {
+		border-style: solid dashed double dotted;
+		width: 300px;
+		height: 100px;
+	}
 */
-/*Ví dụ độ dày của đường viền*/ 
-/*VD: sau sẽ thiết lập độ dày cho từng cạnh*/
+/*VD11*/
 p {
 	border-top-width: thin;
 	border-right-width: medium;
@@ -99,15 +93,14 @@ p {
 	width: 300px;
 	height: 100px;
 }
+/*VD12*/
 p {
 	border-width: thin medium thick 12px;
 	border-style: solid;
 	width: 300px;
 	height: 100px;
 }
-*/
-/*Ví dụ màu của đường viền*/
-/*VD sau sẽ thiết lập màu cho từng cạnh*/
+/*VD13*/
 p {
 	border-top-color: green;
 	border-right-color: red;
@@ -118,8 +111,7 @@ p {
 	width: 300px;
 	height: 100px;
 }
-
-/*VD cạnh trên/dưới có màu xanh, cạnh phải/trái có màu đỏ*/
+/*VD14*/
   p {
 	border-color: green red;
 	border-width: 6px;
@@ -127,60 +119,56 @@ p {
 	width: 300px;
 	height: 100px;
 }
-/*Ví dụ:Kết hợp kiểu, độ dày và màu
-/*Để định dạng cho từng cạnh, sử dụng các thuộc tính: border-top, border-right, border-bottom và border-left*/
-p {
-	border-top: solid 6px green;
-	border-right: solid 6px red;
-	border-bottom: solid 6px violet;
-	border-left: solid 6px yellow;
-	width: 300px;
-	height: 100px;
-}
-/*Để định dạng một lần cho cả bốn cạnh, sử dụng thuộc tính border, các giá trị của thuộc tính border sẽ luôn luôn áp dụng trên cả bốn cạnh*/
-  p {
-    border: solid 6px green;
-    width: 300px;
-    height: 100px;
-  }
-/* VD: Tạo góc bo elipse*/
-/*Để tạo góc bo elipse, cần cung cấp hai giá trị là bo theo chiều ngang (horizontal) và bo theo chiều dọc (vertical)*/
-  p {
-    border: solid 6px green;
-    width: 300px;
-    height: 100px;
-    border-top-right-radius: 15px 30px;
-  }
-/*Nếu sử dụng thuộc tính border-radius thì giá trị của chiều ngang và chiều dọc sẽ ngăn cách nhau bằng dấu xuyệt (/).*/
-  p {
+/*VD15*/ 
+	p{
+		border-top: solid 6px green;
+		border-right: solid 6px red;
+		border-bottom: solid 6px violet;
+		border-left: solid 6px yellow;
+		width: 300px;
+		height: 100px;
+	}
+/*VD16*/ 
+	p {
+		border: solid 6px green;
+		width: 300px;
+		height: 100px;
+	}
+/*VD17*/
+	p {
+		border: solid 6px green;
+		width: 300px;
+		height: 100px;
+		border-top-right-radius: 15px 30px;
+	}
+/*VD18*/
+p{ 
     border: solid 6px green;
     width: 300px;
     height: 100px;
     border-radius: 15px / 40px;
   }
-/* để xác định chiều ngang và chiều dọc cho từng góc, các giá trị chiều ngang sẽ viết liền nhau, các giá trị chiều dọc sẽ viết liền nhau, ngăn cách nhau bằng dấu xuyệt.*/
-  p {
+/*VD19*/
+p {
     border: solid 6px green;
     width: 300px;
     height: 100px;
     border-radius: 36px 40px 60px 20px / 12px 10px 30px 36px;
   }
-/*Ví dụ tạo đường viền bằng hình ảnh*/
-/*VD đường viền của hình (b) được tạo bằng đoạn mã CSS sau*/
-border-image: url(a.png) 55 55 55 55 stretch
-/*Nếu bốn đường cắt có giá trị giống nhau thì có thể viết rút gọn thành một giá trị, ví dụ đoạn mã trên có thể viết lại gọn hơn là,*/
-border-image: url(a.png) 55 stretch
-/*VD: đường viền của hình (d) được tạo bằng đoạn mã CSS sau*/
-border-image: url(c.png) 20 10 20 10 round
-/*Ví dụ, tạo đường viền bằng hình ảnh, có thêm tiếp đầu ngữ -webkit và -o để đoạn mã làm việc tốt trên cả hai trình duyệt Safari và Opera tương ứng,*/
-p {
+/*VD20*/
+	border-image: url(anhgoc.png) top right bottom left stretch
+	border-image: url(a.png) 55 55 55 55 stretch
+	border-image: url(a.png) 55 stretch
+	border-image: url(c.png) 20 10 20 10 round
+/*VD21*/
+P {
     border: 10px solid transparent;
     padding: 15px;
     -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
     -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
     border-image: url(border.png) 30 round;
 }
-/*VD: Đường viền*/
+/*VD22*/
 p {
 	margin-top: 2em;
 	margin-right: 250px;
@@ -189,28 +177,27 @@ p {
 	border: 1px solid red;
 	background: #fcf2be;
 }
-/*đặt lại (reset) giá trị margin và padding của mọi phần tử về 0. Ví dụ*/
+/*VD23*/
 * {
 	margin: 0;
 	padding: 0;
 }
-/*Thuộc tính margin có thể chấp nhận bốn, ba, hai, hoặc một giá trị*/
-/*margin: top right bottom left;*/
-p {
-	margin: 1em 3em 1em 3em;
-	background-color: #d098d4;
-}
-/*margin: top right/left bottom;*/
-p {
-	margin: 1em 3em 1em;
-	background-color: #d098d4;
-}
-/*margin: top/bottom right/left;*/
+/*VD24*/
+	p {
+		margin: 1em 3em 1em 3em;
+		background-color: #d098d4;
+	}
+/*VD25*/
+	p {
+		margin: 1em 3em 1em;
+		background-color: #d098d4;
+	}
+/*VD26*/
 p {
 	margin: 1em 3em;
 	background-color: #d098d4;
 }
-/*Ví dụ, chỉ dẫn CSS sau sẽ thiết lập margin cho cả bốn cạnh là 15px,*/
+/*VD27*/
 p {
 	margin: 15px;
 	background-color: #d098d4;

@@ -1,0 +1,34 @@
+/*VD1*/
+    p, h1, div { color: red; }
+/*VD2*/
+/*VD3*/
+    * { color: red; } /* mọi phần tử đều có chữ màu đỏ */
+/*VD4*/
+    h2 { color: red; } /* các phần tử h2 có chữ màu đỏ */
+/*VD5*/
+    .greencolor { color: green; } /* phần tử nào có giá trị class là greencolor sẽ có màu xanh */
+/*VD6*/
+    #yellowcolor { color: yellow; } /* phần tử có giá trị ID là yellowcolor sẽ có màu vàng */
+/*VD7*/
+    [class] { color: violet; } /* phần tử có thuộc tính là class sẽ có màu tím, không quan tâm giá trị class là gì */
+/*VD8*/
+    h3, p, #yellowcolor { color: blue } /* các phần tử h3, p và phần tử có id="yellowcolor" sẽ có màu blue*/
+/*VD9*/
+    li em { color: red }
+/*VD10*/
+    h1 em, h2 em, h3 em { color: red; }
+    li h3 em { color: red; }
+    p > em { color: red; }
+    ul + h2 { color: red; }
+    ul ~ h2 { color: red; }
+    p.violetcolor { color: violet; }
+/*VD11*/
+    p { color: red; }
+    p.violetcolor { color: violet; }
+/*VD12*/
+    (1)   p { color: red; }                         [0] [0] [1]
+    (2)   p.violetcolor { color: violet; }          [0] [1] [1]
+/*VD13*/
+    (1) p { line-height: 1.2em; }             [0] [0] [1]
+    (2) blockquote p { line-height: 1em; }    [0] [0] [2]
+    (3) p.intro { line-height: 2em; }         [0] [1] [1]

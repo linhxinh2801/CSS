@@ -1,89 +1,48 @@
-/*Nền chuyển sắc tuyến tính*/
-p {
-    width: 300px;    height: 100px;    padding: 20px;
-    background-image: linear-gradient(90deg, yellow, green);
-  }
-background-image: linear-gradient(to right, yellow, green);
-/*Ví dụ sau là một nền chuyển sắc từ trái qua phải, gồm ba màu chặn, màu thứ hai nằm ở vị trí 50% của đường thẳng */
+/*VD1*/
+  p {
+      width: 300px;    height: 100px;    padding: 20px;
+      background-image: linear-gradient(90deg, yellow, green);
+    }
+  background-image: linear-gradient(to right, yellow, green);
+/*VD2*/
 p {
     width: 300px;    height: 100px;    padding: 20px;
     background-image: linear-gradient(to right, yellow, red 50%, green);
   }
-/*Ví dụ, tạo nền chuyển sắc 3-D*/
+/*VD3*/
 p {
     width: 300px;    height: 100px;    padding: 20px;
     background-image: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
   }
-/* Nền chuyển sắc tỏa tròn*/
-/*Ví dụ một chỉ dẫn CSS có sử dụng radial-gradient dạng đơn giản nhất, chỉ gồm 2 màu chặn*/
+/* VD4*/
 p {
     width: 300px; height: 100px; padding: 20px;
     background-image: radial-gradient(yellow, green);
   }
-/*Ví dụ, Đường giới hạn là đường tròn*/
-background-image: radial-gradient(circle, yellow, green);
-/*Ví dụ, thiết lập giá trị Tâm điểm là 80%, 20%, (để ý: có thêm từ khóa at)*/
-background-image: radial-gradient(circle at 80% 20%, yellow, green)
-/*Ví dụ, dải màu vàng dày 10%*/
+/*VD5*/
+  background-image: radial-gradient(circle, yellow, green);
+
+  background-image: radial-gradient(circle at 80% 20%, yellow, green)
+/*VD6*/
 p {
     width: 300px; height: 100px; padding: 20px;
     background-image: radial-gradient(circle, yellow 10%, green)
   }
-/*Ví dụ, dải màu vàng dày 50%*/
+/*VD7*/
 p {
     width: 300px; height: 100px; padding: 20px;
     background-image: radial-gradient(circle, yellow 50%, green)
   }
-/*Tương thích với các trình duyệt*/
-/*Ví dụ sau đây là đoạn mã để tạo ra một nền chuyển sắc có tính tương thích với nhiều trình duyệt:*/
-background: #ffff00; /* Old browsers */
-background: -moz-linear-gradient(top, #ffff00 0%, #00ff00 100%);
-/* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, colorstop(
-0%,#ffff00), color-stop(100%,#00ff00));
-/* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #ffff00 0%,#00ff00 100%);
-/* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #ffff00 0%,#00ff00 100%);
-/* Opera 11.10+ */
-background: -ms-linear-gradient(top, #ffff00 0%,#00ff00 100%);
-/* IE10+ */
-background: linear-gradient(to bottom, #ffff00 0%,#00ff00 100%);
-/* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient(
-startColorstr=’#ffff00’, endColorstr=’#00ff00’,GradientType=0 );
-/* IE6-9 */
-/*Viết CSS ở tập tin riêng*/
-/*Sử dungk phần tử link*/
+/*VD8*/
 <head>
 <title>Titles are required</title>
 <link rel="stylesheet" type="text/css" href="/path/stylesheet.css">
 </head>
-/*Sử dụng chỉ dẫn import*/
-/*Ví dụ, đặt trong phần tử style*/
+/*VD9*/
 <head>
-<style>
-@import url("/path/stylesheet.css");
-p { font-face: Verdana;}
-</style>
-<title>Titles are required.</title>
+    <style>
+      @import url("/path/stylesheet.css");
+      p { font-face: Verdana;}
+    </style>
+  <title>Titles are required.</title>
 </head>
-/*Chia nhỏ mã CSS vào nhiều tập tin*/
-/*Nội dung của tập tin clientsite.css:
-/* basic typography */
-
-@import url("type.css");
-
-/* form inputs */
-
-@import url("forms.css");
-
-/* navigation */
-
-@import url("list-nav.css");
-
-/* site-specific styles */
-
-body { background: orange; }
-
-…các chỉ dẫn CSS khác…*/
